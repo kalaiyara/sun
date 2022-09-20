@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+ <meta http-equiv="refresh" content="6000000 " />  
+<head>
+
+
+<title>Registeration  form</title>
+<script language="javascript">
+ /*	
+const form=document.getElementById("hello");
+const username=document.getElementById("user");
+const pass=document.getElementById("password");
+const password=document.getElementById("password2");
+function checkinput(){
+	const usernamevalue=username.value.trim(); 
+	const usernamevalue=pass.value.trim(); 
+	const usernamevalue=password.value.trim();
+	}
+if(usernamevalue====""){
+	setError(username, "Username Cannot Be blank");
+	}
+else
+
+	{
+	setsuccess(username);
+	}*/
+
+
+
+
+
+
+
+
+
+
+  /* trim - space remover*/
+const form=document.getElementById("hello");
+const username=document.getElementById("user");
+const pass=document.getElementById("password");
+const password=document.getElementById("password2");  
+function valid()
+{
+var users=document.hi.user.value;
+
+if(users==" " || users.length<9 )
+		{
+			alert("please input a valid username");
+			 
+		}
+var passs=document.hi.pass.value;
+if(passs==" "||passs.length<9 )
+		{
+		alert("please input a valid password");
+		 
+		} 
+
+for(i=0;i<users.length;i++)
+	{
+	ch=users.charAt(i);
+	
+	if(ch==' ')
+	sp=1;
+	 }
+	 if(sp==1)
+		{
+		alert("please input a username without space");
+		return false;
+		} 
+const usernamevalue=username.value.trim(); 
+const passvalue=pass.value.trim(); 
+const passwordvalue=password.value.trim();
+
+if(pass==="")
+ {
+	alert(password, "cannot blank")
+ }
+else
+  {
+	setSucess(password)
+  }
+if(pass!==password)
+ {
+	alert(password, "none")
+ }
+elseif
+  {
+	alert(password, "cannat mat")
+  }
+else
+  {
+	setSucess(password);
+  }
+
+ 
+/*
+var num=new RegExp("^[a-zA-Z0-9]+$");
+var str=String.fromCharCode(valid.charCode ? valid.which : valid.charCode);
+if(num.test(str))
+{
+alert("hhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
+return true;
+}
+valid.preventDefault();
+return false;
+*/
+	 /*
+	alpha=[a-zA-Z]/;
+	digit=/[0-9]/;
+	alphadigit=1;
+	if(passs.match(alpha)&&passs.match(digit))
+		{
+		alert("heloo");
+		}
+		
+	else if(alphadigit==0)
+		{
+		alert("please enter ayleast one alphabet and atleast one digiy");
+		}	
+ 	else
+		{
+			alert("successful valid");
+			return true;
+		}
+	return true; */
+ 
+ 
+}
+	
+</script>
+
+
+</head>
+
+<body background-color="pink" 
+	margin="0">
+<!--<img  src="image.jpg" />-->
+
+<div class="registration">  
+ <form name="hi" action="form.html" id="hello" method="GET"  onsubmit="return valid();" enctype="multipart/form.data"> 
+	<!--enctype is big data send to sever helper --> 
+ <div>
+<h3>Sign Up</h3>
+</div> 
+<div class="textlabel">
+	<label for="name">User name</label>
+	<input type="text" id="user"   name="user" placeholder="Username" value=""  maxlength="15" minlength="4" required  >
+</div>
+<!--<div class="textlabel">
+	<label for="email"> Email</label>
+	<input type="email" id="email"   name="name" required>
+	<i class="fas fa-check-circle"></i>
+</div>-->
+ <div class="textlabel" >
+	<label for="password"  >Password</label>
+	<input type="password" id="password" name="pass" placeholder="password" maxlength="9" value="" minlength="8"required  >
+  
+                 
+  </div>
+ <div class="textlabel" >
+	<label for="password2"  >Confirm Password</label>
+	<input type="password" id="password2" name="passs" placeholder="Confirm Password" maxlength="9" minlength="8"  required  >
+ 
+</div>
+<!--<div class="radio">
+	<input type="radio" name="gender" id="male">
+	<label for="male">Male</label> 
+	<input type="radio" name="gender" id="female">
+	<label for="female">Female</label> 
+
+</div>-->
+<center><div class="button"> 
+
+	<button type="submit" id="submit">Register</button>
+	<button type="newuser" action=" .html">New User</button>
+	<button type="Reset" class="button"> Reset</button></center>
+	
+
+
+
+</div>
+
+</form> </div>
+
+
+
+</body>
+ <style type="text/css">
+	   *{
+  
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+ body{
+width:100%;
+height:100%;
+background-color:beige;
+align-items: center;
+}
+ 
+	.registration{
+ 
+ 
+		width:600px;
+		margin:50px auto;
+		padding:40px;
+		background-color:lavender;
+		color:black;
+		font-size:25px;
+		border-radius:10px;
+		}
+	.registration h3{
+		text-align:center;
+		color:blue; }
+ 	.registration label{
+		display:block;
+	}
+	.textlabel input{
+		width:100%;
+		font-size:20px;
+		 
+		 
+		box-shadow:2px;
+		border-radius:4px;/* radius is box join rounder*/
+		padding:10px  ;
+		box-sizing:border-box;
+		 
+		 
+		}
+	.textlabel input:focus{
+		background-color:pink;
+		 
+}
+	button{
+		background-color:white;
+
+font-size:30px;
+color:blue;
+margin-top:20px;
+padding:15px 25px;
+border-radius:8px;
+border:4px solid;}
+ 
+	 
+		
+}		
+
+</style>
+	
+</html>
